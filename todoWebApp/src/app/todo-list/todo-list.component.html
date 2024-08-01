@@ -1,8 +1,10 @@
 <app-navbar></app-navbar>
 
-<div class="container-fluid">
-    <div class="content">
-        
+<div class="content mt-5">
+    <div class="container-fluid bg-dark w-50">
+            <div *ngFor="let todo of todoList" class=" caja  mb-3 border border-white">
+                <div class="p-2 text-white"><input type="radio">  {{todo.name}}</div>
+            </div>
+            <app-search-todo ></app-search-todo>
     </div>
 </div>
-<app-search-todo></app-search-todo>

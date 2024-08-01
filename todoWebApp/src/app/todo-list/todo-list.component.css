@@ -1,8 +1,10 @@
 
 
 .container-fluid {
-    background: #212529;
     min-height: 85vh;
-    display: flex;
     flex-direction: column;
+  }
+
+  .caja{
+    border-radius: 5px;
   }
