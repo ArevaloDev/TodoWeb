@@ -3,3 +3,7 @@ export interface TodoItems{
     name:string,
     isComplete:boolean
 }
+
+export interface UpdateTodo{
+    isCompleted:boolean
+}

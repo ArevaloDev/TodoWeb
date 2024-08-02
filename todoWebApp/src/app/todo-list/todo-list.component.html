@@ -1,10 +1,15 @@
 <app-navbar></app-navbar>
 
-<div class="content mt-5">
-    <div class="container-fluid bg-dark w-50">
-            <div *ngFor="let todo of todoList" class=" caja  mb-3 border border-white">
-                <div class="p-2 text-white"><input type="radio">  {{todo.name}}</div>
-            </div>
-            <app-search-todo ></app-search-todo>
+<div class="content">
+  <div class="container-fluid bg-dark w-50">
+    <div *ngFor="let todo of todoList" class="caja  border border-white">
+        <form [formGroup]="form">
+            <div class="p-2 text-white"><input (ngModelChange)="updateTodo(todo.id)" type="radio" value="true" formControlName="isCompleted"/> {{ todo.name }}</div>
+        </form>
     </div>
+  </div>
+</div>
+
+<div class="content ">
+  <app-search-todo></app-search-todo>
 </div>
