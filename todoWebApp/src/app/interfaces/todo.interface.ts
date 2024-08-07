@@ -1,7 +1,7 @@
 export interface TodoItems{
     id?: number,
     name:string,
-    isComplete:boolean
+    isCompleted:boolean
 }
 
 export interface UpdateTodo{

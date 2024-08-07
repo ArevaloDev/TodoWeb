@@ -33,7 +33,7 @@ export class TodoService {
     
     this.http.patch(`${this.api}/TodoItems/${id}`, todo).subscribe((response => {
       console.log(response);
-      
+      this.getTasks();
     }))
   }
 }

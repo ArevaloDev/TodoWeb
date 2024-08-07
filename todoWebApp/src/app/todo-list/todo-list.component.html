@@ -2,9 +2,9 @@
 
 <div class="content">
   <div class="container-fluid bg-dark w-50">
-    <div *ngFor="let todo of todoList" class="caja  border border-white">
+    <div *ngFor="let todo of todoList; let i = index;" class="caja mb-3 mt-3 border border-white">
         <form [formGroup]="form">
-            <div class="p-2 text-white"><input (ngModelChange)="updateTodo(todo.id)" type="radio" value="true" formControlName="isCompleted"/> {{ todo.name }}</div>
+            <div class="p-2 text-white"><input (change)="updateTodo(todo.id, true)" name="isCompleted"  type="radio" value="true" formControlName="isCompleted"/> {{ todo.name }}</div>
         </form>
     </div>
   </div>

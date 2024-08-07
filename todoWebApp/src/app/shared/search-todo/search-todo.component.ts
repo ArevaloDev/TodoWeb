@@ -23,7 +23,7 @@ export class SearchTodoComponent {
     console.log('value:', this.taskValue);
     const data:TodoItems = {
       name: this.taskValue,
-      isComplete:false
+      isCompleted:false
     }
     this.taskValue = '';
     this.todoService.SendTasks(data);
